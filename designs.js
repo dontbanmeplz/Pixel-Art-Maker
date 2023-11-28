@@ -11,7 +11,6 @@ sizePicker.addEventListener("click", go);
     makeGrid();
 };*/
 function go(){
-    event.preventDefault();
     clearGrid();
     makeGrid();
 }
