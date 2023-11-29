@@ -21,6 +21,7 @@ function makeGrid() {
         for (let c=0; c<19; c++){
             const cell = row.insertCell(c);
             cell.addEventListener("click", fillSquare);
+            cell.setAttribute("style", "background-color: #ffffff");
         }
     }
 }
