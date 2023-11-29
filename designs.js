@@ -40,7 +40,7 @@ function fillSquare () {
     {
         this.setAttribute("style", `background-color: ${color.value}`);
     }
-    else
+    else if (this.style.backgroundColor.value != "#ffffff")
     {
         this.setAttribute("style", "background-color: #ffffff");
     }
