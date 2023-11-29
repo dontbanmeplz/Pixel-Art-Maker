@@ -41,7 +41,7 @@ function clearGrid(){
 // }
 
 function fillSquare () {
-    if (this.style.backgroundColor != "#ffffff")
+    if (this.style.backgroundColor == "#ffffff")
     {
         this.setAttribute("style", `background-color: ${color.value}`);
     }
