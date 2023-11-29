@@ -1,5 +1,6 @@
 /* jshint esnext: true */
 /* global document */
+let color = document.getElementById("colorPicker");
 let canvas = document.getElementById("pixel_canvas");
 let height = 11;
 let width = 20;
