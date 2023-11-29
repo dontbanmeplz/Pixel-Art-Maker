@@ -16,12 +16,12 @@ function go(){
     makeGrid();
 }
 function makeGrid() {
-    for (let r=0; r<1; r++){
+    for (let r=0; r<10; r++){
         const row = canvas.insertRow(r);
         for (let c=0; c<19; c++){
             const cell = row.insertCell(c);
             cell.addEventListener("click", fillSquare);
-            if (row==0 || row==10)
+            if (r==0 || r==10)
             {
                 cell.setAttribute("style", `background-color: #000000}`);
             }
@@ -40,5 +40,12 @@ function clearGrid(){
 // }
 
 function fillSquare () {
-    this.setAttribute("style", `background-color: ${color.value}`);
+    if (this.style.backgroundColor != "#ffffff")
+    {
+        this.setAttribute("style", `background-color: ${color.value}`);
+    }
+    else
+    {
+        this.setAttribute("style", "background-color: #ffffff");
+    }
 }
