@@ -21,11 +21,6 @@ function makeGrid() {
         for (let c=0; c<19; c++){
             const cell = row.insertCell(c);
             cell.addEventListener("click", fillSquare);
-            cell.setAttribute("style", `background-color: #ffffff}`);
-            if (r==0 || r==10)
-            {
-                cell.setAttribute("style", `background-color: #000000}`);
-            }
         }
     }
 }
@@ -41,7 +36,7 @@ function clearGrid(){
 // }
 
 function fillSquare () {
-    if (this.style.backgroundColor == "#ffffff")
+    if (this.style.backgroundColor == "#ffffff" || this.style.backgroundColor == null)
     {
         this.setAttribute("style", `background-color: ${color.value}`);
     }
