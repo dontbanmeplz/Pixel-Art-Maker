@@ -16,9 +16,9 @@ function go(){
     makeGrid();
 }
 function makeGrid() {
-    for (let r=0; r<height; r++){
+    for (let r=0; r<11; r++){
         const row = canvas.insertRow(r);
-        for (let c=0; c<width; c++){
+        for (let c=0; c<20; c++){
             const cell = row.insertCell(c);
             cell.addEventListener("click", fillSquare);
         }
