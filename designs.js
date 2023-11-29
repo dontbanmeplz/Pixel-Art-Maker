@@ -52,9 +52,8 @@ function expor()
     let out = [];
     for (var i = 0, row; row = canvas.rows[i]; i++) {
         out[i] = [];
-        outt = out[i];
        for (var j = 0, col; col = row.cells[j]; j++) {
-           outt[j] == col.style.backgroundColor;
+           out[i][j] = col.style.backgroundColor;
        } 
    
     }
