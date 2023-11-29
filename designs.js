@@ -36,11 +36,11 @@ function clearGrid(){
 // }
 
 function fillSquare () {
-    if (this.style.backgroundColor.value == "#ffffff" || this.style.backgroundColor.value == null)
+    if (this.style.backgroundColor == "rgb(255, 255, 255)" || this.style.backgroundColor == null)
     {
         this.setAttribute("style", `background-color: ${color.value}`);
     }
-    else if (this.style.backgroundColor.value != "#ffffff")
+    else if (this.style.backgroundColor != "rgb(255, 255, 255)")
     {
         this.setAttribute("style", "background-color: #ffffff");
     }
