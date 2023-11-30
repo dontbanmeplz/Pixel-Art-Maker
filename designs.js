@@ -8,8 +8,11 @@ var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456
 let sizePicker = document.getElementById("go");
 sizePicker.addEventListener("click", go);
 let isMouseDown = false;
-
-canvas.addEventListener("mousedown", () => {
+let col = color.value;
+canvas.addEventListener("mousedown", (e) => {
+    if (isMouseDown == false){
+        col = e.target.style.backgroundColor;
+    }
     isMouseDown = true;
 });
 
@@ -28,7 +31,7 @@ function go(){
     makeGrid();
 }
 function erase(){
-    color.value = "#ffffff";
+    //color.value = "#ffffff";
 }
 function makeGrid() {
     for (let r=0; r<10; r++){
@@ -54,7 +57,7 @@ function clearGrid(){
 function fillSquare () {
     //if (this.style.backgroundColor == "rgb(255, 255, 255)" || this.style.backgroundColor == null)
     //{
-        this.setAttribute("style", `background-color: ${color.value}`);
+        this.setAttribute("style", `background-color: ${col}`);
     //}
     //else if (this.style.backgroundColor != "rgb(255, 255, 255)")
     //{
