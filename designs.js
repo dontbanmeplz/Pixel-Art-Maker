@@ -21,7 +21,11 @@ function makeGrid() {
         const row = canvas.insertRow(r);
         for (let c=0; c<19; c++){
             const cell = row.insertCell(c);
-            cell.addEventListener("click", fillSquare);
+            cell.addEventListener("mouseover", function(e){
+                if(e.buttons == 1 || e.buttons == 3){
+                    fillSquare(this)
+                }
+            })
             cell.setAttribute("style", "background-color: #ffffff");
         }
     }
@@ -37,14 +41,14 @@ function clearGrid(){
 //  table.deleteRow(0);
 // }
 
-function fillSquare () {
-    if (this.style.backgroundColor == "rgb(255, 255, 255)" || this.style.backgroundColor == null)
+function fillSquare (e) {
+    if (e.style.backgroundColor == "rgb(255, 255, 255)" || e.style.backgroundColor == null)
     {
-        this.setAttribute("style", `background-color: ${color.value}`);
+        e.setAttribute("style", `background-color: ${color.value}`);
     }
-    else if (this.style.backgroundColor != "rgb(255, 255, 255)")
+    else if (e.style.backgroundColor != "rgb(255, 255, 255)")
     {
-        this.setAttribute("style", "background-color: #ffffff");
+        e.setAttribute("style", "background-color: #ffffff");
     }
 }
 function rgb(rg) {
