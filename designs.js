@@ -67,12 +67,11 @@ function expor()
                home = home.replace("rgb(", "");
                home = home.replace(")", "");
                home = rgb(home);
-               home = Base64.encode(home);
            }
                out[i][j] = home;
        } 
    
     }
-    navigator.clipboard.writeText(home);
+    navigator.clipboard.writeText(Base64.encode(out.toString()));
     alert("copied");
 }
