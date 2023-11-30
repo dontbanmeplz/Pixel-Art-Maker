@@ -27,6 +27,9 @@ function go(){
     clearGrid();
     makeGrid();
 }
+function erase(){
+    color.value = "#ffffff";
+}
 function makeGrid() {
     for (let r=0; r<10; r++){
         const row = canvas.insertRow(r);
@@ -49,14 +52,14 @@ function clearGrid(){
 // }
 
 function fillSquare () {
-    if (this.style.backgroundColor == "rgb(255, 255, 255)" || this.style.backgroundColor == null)
-    {
+    //if (this.style.backgroundColor == "rgb(255, 255, 255)" || this.style.backgroundColor == null)
+    //{
         this.setAttribute("style", `background-color: ${color.value}`);
-    }
-    else if (this.style.backgroundColor != "rgb(255, 255, 255)")
-    {
-        this.setAttribute("style", "background-color: #ffffff");
-    }
+    //}
+    //else if (this.style.backgroundColor != "rgb(255, 255, 255)")
+    //{
+        //this.setAttribute("style", "background-color: #ffffff");
+    //}
 }
 function rgb(rg) {
     const rgh = rg.split(", ");
