@@ -73,7 +73,7 @@ function rgb(rg) {
 }
 function expor()
 {
-    let out = [][];
+    let out = [[]];
     var home;
     for (var i = 0, row; row = canvas.rows[i]; i++) {
         out[i] = [];
