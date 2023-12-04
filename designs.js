@@ -1,6 +1,5 @@
 /* jshint esnext: true */
 /* global document */
-let color = document.getElementById("colorPicker");
 let canvas = document.getElementById("pixel_canvas");
 let height = 11;
 let width = 20;
@@ -8,7 +7,7 @@ var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456
 let sizePicker = document.getElementById("go");
 sizePicker.addEventListener("click", go);
 let isMouseDown = false;
-let col = color.value;
+let col = "#000000";
 canvas.addEventListener("mousedown", (e) => {
     if (isMouseDown == false){
         col = "#ffffff";
