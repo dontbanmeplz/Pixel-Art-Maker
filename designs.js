@@ -11,7 +11,10 @@ let isMouseDown = false;
 let col = color.value;
 canvas.addEventListener("mousedown", (e) => {
     if (isMouseDown == false){
-        col = e.target.style.backgroundColor;
+        col = "#ffffff";
+        if (e.target.style.backgroundColor == "rgb(255, 255, 255)"){
+            col = "#000000";
+        }
     }
     isMouseDown = true;
 });
