@@ -14,6 +14,7 @@ canvas.addEventListener("mousedown", (e) => {
         if (e.target.style.backgroundColor == "rgb(255, 255, 255)"){
             col = "#000000";
         }
+        fillSquare.call(event.target);
     }
     isMouseDown = true;
 });
