@@ -8,11 +8,12 @@ let sizePicker = document.getElementById("go");
 sizePicker.addEventListener("click", go);
 let isMouseDown = false;
 let col = "#000000";
+let coll = "#000000";
 canvas.addEventListener("mousedown", (e) => {
     if (isMouseDown == false){
         col = "#ffffff";
         if (e.target.style.backgroundColor == "rgb(255, 255, 255)"){
-            col = "#000000";
+            col = coll;
         }
         fillSquare.call(event.target);
     }
@@ -22,7 +23,16 @@ canvas.addEventListener("mousedown", (e) => {
 canvas.addEventListener("mouseup", () => {
     isMouseDown = false;
 });
-
+$(document).keydown(function(e){
+    if (e.which == 81) { 
+        coll = "#000000";
+       return false;
+    }
+    if (e.which == 87) { 
+        coll = "#FF0000";
+       return false;
+    }
+});
 canvas.addEventListener("mouseover", (event) => {
     if (isMouseDown) {
         fillSquare.call(event.target);
